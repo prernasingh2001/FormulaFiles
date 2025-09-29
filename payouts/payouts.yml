@@ -1,4 +1,4 @@
-shipping_charge:
+supplier_payment:
   execution_id: 1
   key_name: "supplier_payment"
   expression: "base_price + shipping_price + discount"
