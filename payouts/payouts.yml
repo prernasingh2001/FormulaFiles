@@ -6,11 +6,12 @@ supplier_payment:
   constraints: ["base_price > 0", "shipping_price > 0"]
   node_type: "float"
   parameter_type: 
-    name: "base_price"
+    - name: "base_price"
+      type: "int"
+    - name: "shipping_price"
     type: "int"
-    name: "shipping_price"
-    type: "int"
-    name: "discount"
+    - name: "discount"
+      type: "int"
     type: "int"
   output_type: "int"
   output_value: "int"
