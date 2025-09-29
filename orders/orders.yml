@@ -1,0 +1,14 @@
+shipping_charge:
+  execution_id: 1
+  key_name: "shipping_charge"
+  expression: "base_price * shipping_price"
+  dependencies: 
+  constraints: ["base_price > 0", "shipping_price > 0"]
+  node_type: "float"
+  parameter_type: 
+    name: "base_price"
+    type: "float"
+    name: "shipping_price"
+    type: "float"
+  output_type: "float"
+  output_value: "float"
