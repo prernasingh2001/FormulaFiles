@@ -9,7 +9,7 @@ supplier_payment:
     - name: "base_price"
       type: "int"
     - name: "shipping_price"
-    type: "int"
+      type: "int"
     - name: "discount"
       type: "int"
     type: "int"
