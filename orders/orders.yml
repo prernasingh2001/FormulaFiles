@@ -6,9 +6,9 @@ shipping_charge:
   constraints: ["base_price > 0", "shipping_price > 0"]
   node_type: "float"
   parameter_type: 
-    name: "base_price"
-    type: "float"
-    name: "shipping_price"
-    type: "float"
+  - name: "param1"
+    type: "scalar"
+  - name: "param2"
+    type: "int"
   output_type: "float"
   output_value: "float"
