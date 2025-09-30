@@ -1,5 +1,5 @@
-shipping_charge:
-  execution_id: 1
+1:
+  description: "shipping_charge"
   expression: "base_price * shipping_price"
   dependencies: 
   constraints: ["base_price > 0", "shipping_price > 0"]
@@ -9,14 +9,14 @@ shipping_charge:
     type: "int"
   - name: "shipping_price"
     type: "double"
-  output_type: 
+  output_parameter_type: 
   - name: "shipping_charge"
     type: "double"
   lib_type: "expr"
 
 
-supplier_payment:
-  execution_id: 2
+2:
+  description: "supplier_payment"
   expression: "base_price + shipping_price + discount"
   dependencies: 
   constraints: ["base_price > 0", "shipping_price > 0"]
@@ -33,8 +33,8 @@ supplier_payment:
     type: "int"
   lib_type: "expr"
 
-meesho_balance:
-  execution_id: 3
+3:
+  description: "meesho_balance"
   expression: "GetMeeshoBalance"
   dependencies: 
   constraints: []
