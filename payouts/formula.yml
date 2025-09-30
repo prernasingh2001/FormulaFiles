@@ -4,7 +4,7 @@ supplier_payment:
   expression: "base_price + shipping_price + discount"
   dependencies: 
   constraints: ["base_price > 0", "shipping_price > 0"]
-  node_type: "float"
+  node_type: "scalar"
   parameter_type: 
   - name: "base_price"
     type: "int"
@@ -12,5 +12,6 @@ supplier_payment:
     type: "int"
   - name: "discount"
     type: "int"
-  output_type: "int"
+  output_type: "scalar"
   output_value: "int"
+  lib_type: "expr"

@@ -4,11 +4,43 @@ shipping_charge:
   expression: "base_price * shipping_price"
   dependencies: 
   constraints: ["base_price > 0", "shipping_price > 0"]
-  node_type: "float"
+  node_type: "scalar"
   parameter_type: 
-  - name: "param1"
-    type: "scalar"
-  - name: "param2"
+  - name: "base_price"
     type: "int"
+  - name: "shipping_price"
+    type: "double"
+  output_type: "scalar"
+  output_value: "double"
+  lib_type: "expr"
+
+
+supplier_payment:
+  execution_id: 2
+  key_name: "supplier_payment"
+  expression: "base_price + shipping_price + discount"
+  dependencies: 
+  constraints: ["base_price > 0", "shipping_price > 0"]
+  node_type: "vector"
+  parameter_type: 
+  - name: "base_price"
+    type: "int"
+  - name: "shipping_price"
+    type: "int"
+  - name: "discount"
+    type: "int"
+  output_type: "vector"
+  output_value: "int"
+  lib_type: "expr"
+
+meesho_balance:
+  execution_id: 3
+  key_name: "meesho_balance"
+  expression: "GetMeeshoBalance"
+  dependencies: 
+  constraints: []
+  node_type: "func"
+  parameter_type: []
   output_type: "float"
-  output_value: "float"
+  output_value: "func"
+  lib_type: "func"
