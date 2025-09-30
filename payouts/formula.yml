@@ -40,7 +40,7 @@
   constraints: []
   node_type: "func"
   input_parameter_type: 
-  output_parametertype: 
+  output_parameter_type: 
   - name: "meesho_balance"
     type: "float"
   lib_type: "func"
